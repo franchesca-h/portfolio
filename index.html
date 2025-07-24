@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Franchesca Hernández Vasquez - Portafolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .dark-mode header,
+    .dark-mode footer {
+      background-color: #1e1e1e;
+    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1rem 0;
+      background-color: #1f1f1f;
+    }
+    .project-img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+    }
+    .project-info {
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="logo">Chekydev</div>
+    <ul>
+      <li><a href="#sobre-mi">Sobre Mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-toggle" title="Cambiar modo">
+    <i class="fas fa-moon"></i>
+  </button>
+</header>
+
+<main>
+  <section class="hero-section">
+    <img src="https://avatars.githubusercontent.com/u/197957390?v=4" alt="Franchesca Hernández" class="hero-avatar">
+    <div class="hero-content">
+      <h1>Hola, soy Franchesca</h1>
+      <p>Desarrolladora apasionada por crear soluciones elegantes y funcionales.</p>
+      <div class="hero-buttons">
+  <a href="#proyectos" class="btn-primary">Proyectos</a>
+  <a href="#habilidades" class="btn-secondary">Habilidades</a>
+  <a href="#sobre-mi" class="btn-secondary">Sobre mí</a>
+  <a href="#stack" class="btn-secondary">Stack</a>
+  <a href="https://github.com/franchesca-h" class="btn-secondary" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+</div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="about-section section">
+    <h2>Sobre Mí</h2>
+    <p>
+      Soy Franchesca Hernández, desarrolladora especializada en el ecosistema <strong>Microsoft Power Platform</strong> y en la automatización de procesos empresariales. Tengo experiencia creando aplicaciones con <strong>Power Apps</strong>, automatizando flujos con <strong>Power Automate</strong> y analizando datos con <strong>Power BI</strong>, además de integrar soluciones con <strong>Dataverse</strong> y otras herramientas de Microsoft.<br><br>
+      Complemento mi perfil con conocimientos sólidos en <strong>Go</strong>, <strong>C++</strong> y <strong>Flutter</strong>, así como experiencia en el uso de <strong>Docker</strong>, <strong>Git</strong> y bases de datos relacionales.<br><br>
+      Cuento con un <strong>Certificado de Profesionalidad de Nivel 3 en Programación de Sistemas Informáticos</strong>, lo que avala mi formación técnica y mi capacidad para abordar proyectos complejos.<br><br>
+      Me apasiona la transformación digital, el aprendizaje continuo y la creación de soluciones limpias, eficientes y alineadas con las necesidades del negocio. Busco aportar valor en equipos que apuesten por la innovación y la mejora continua.
+    </p>
+  </section>
+
+  <section id="proyectos" class="section">
+    <h2>Proyectos Destacados</h2>
+    <article class="project-card">
+      <img src="img/gestion-solicitudes-internas.png" alt="App Gestión de Solicitudes Internas" class="project-img">
+      <div class="project-info">
+        <h3>Gestión de Solicitudes Internas</h3>
+        <p>Proyecto de práctica donde aprendí a crear una app sencilla con <strong>Power Apps</strong> para registrar y hacer seguimiento de solicitudes dentro de una empresa. Probé cómo automatizar avisos y aprobaciones usando <strong>Power Automate</strong> y guardé los datos en <strong>Dataverse</strong>. ¡Me ayudó mucho a entender cómo conectar todo!</p>
+        <a href="#" class="btn-primary" target="_blank">Ver proyecto</a>
+      </div>
+    </article>
+    <!-- Aquí irían más proyectos similares -->
+  </section>
+</main>
+
+ <button class="contact-float-btn" title="Contáctame" id="openContactModal">
+  <i class="fas fa-envelope"></i>
+</button>
+
+<div class="contact-modal" id="contactModal">
+  <div class="contact-modal-content">
+    <span class="close-modal" id="closeContactModal">&times;</span>
+    <h2>Contáctame</h2>
+    <form action="https://formspree.io/f/{tu_codigo}" method="POST">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="email">Correo</label>
+      <input type="email" id="email" name="email" required>
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Chekydev. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+
+  // Modal contacto
+  const contactModal = document.getElementById('contactModal');
+  document.getElementById('openContactModal').onclick = () => {
+    contactModal.style.display = 'flex';
+  };
+  document.getElementById('closeContactModal').onclick = () => {
+    contactModal.style.display = 'none';
+  };
+  window.onclick = (e) => {
+    if (e.target === contactModal) contactModal.style.display = 'none';
+  };
+</script>
+</body>
+</html>
