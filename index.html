@@ -83,17 +83,90 @@
   </section>
 
   <section id="proyectos" class="section">
-    <h2>Proyectos Destacados</h2>
-    <article class="project-card">
-      <img src="img/gestion-solicitudes-internas.png" alt="App Gestión de Solicitudes Internas" class="project-img">
-      <div class="project-info">
-        <h3>Gestión de Solicitudes Internas</h3>
-        <p>Proyecto de práctica donde aprendí a crear una app sencilla con <strong>Power Apps</strong> para registrar y hacer seguimiento de solicitudes dentro de una empresa. Probé cómo automatizar avisos y aprobaciones usando <strong>Power Automate</strong> y guardé los datos en <strong>Dataverse</strong>. ¡Me ayudó mucho a entender cómo conectar todo!</p>
-        <a href="#" class="btn-primary" target="_blank">Ver proyecto</a>
-      </div>
-    </article>
-    <!-- Aquí irían más proyectos similares -->
+  <h2>Proyectos Destacados</h2>
+  <div class="projects-gallery">
+    <div class="project-thumb openProjectModal"
+         data-title="Gestión de Solicitudes Internas"
+         data-img="images/Solicitudes.png"
+         data-desc="Proyecto de práctica donde aprendí a crear una app sencilla con <strong>Power Apps</strong> para registrar y hacer seguimiento de solicitudes dentro de una empresa. Probé cómo automatizar avisos y aprobaciones usando <strong>Power Automate</strong> y guardé los datos en <strong>Dataverse</strong>. ¡Me ayudó mucho a entender cómo conectar todo!">
+      <img src="images/Solicitudes.png" alt="Gestión de Solicitudes Internas">
+      <div class="project-thumb-title">Gestión de Solicitudes Internas</div>
+    </div>
+ <!-- Proyecto Protectora de Animales -->
+<div class="project-thumb openProjectModal"
+     data-title="Gestión de Protectora de Animales"
+     data-img="images/protectora-animales.png"
+     data-desc="Aplicación creada con <strong>Power Apps</strong> para la gestión integral de una protectora de animales. Permite registrar animales, gestionar adopciones, controlar el historial veterinario y automatizar avisos de vacunas y revisiones con <strong>Power Automate</strong>. Los datos se almacenan de forma segura en <strong>Dataverse</strong>.">
+  <img src="images/ProtectoraPets.png" alt="Gestión Protectora de Animales">
+  <div class="project-thumb-title">Protectora de Animales</div>
+  <div class="project-thumb-buttons">
+    <a href="#" class="btn-demo" target="_blank" rel="noopener">
+      <i class="fa-solid fa-play"></i> Demo
+    </a>
+    <a href="#" class="btn-github" target="_blank" rel="noopener">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</div>
+
+<!-- Proyecto Supermercado -->
+<div class="project-thumb openProjectModal"
+     data-title="Gestión de Supermercado"
+     data-img="images/supermercado.png"
+     data-desc="Solución desarrollada con <strong>Power Apps</strong> para la gestión de inventario, ventas y pedidos en un supermercado. Incluye paneles de control para seguimiento de stock, generación de reportes y automatización de pedidos a proveedores mediante <strong>Power Automate</strong>. Integración total con <strong>Dataverse</strong> para la gestión de datos.">
+  <img src="images/SuperMarket.png" alt="Gestión de Supermercado">
+  <div class="project-thumb-title">Gestión de Supermercado</div>
+  <div class="project-thumb-buttons">
+    <a href="#" class="btn-demo" target="_blank" rel="noopener">
+      <i class="fa-solid fa-play"></i> Demo
+    </a>
+    <a href="#" class="btn-github" target="_blank" rel="noopener">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</div>
+
+<!-- Proyecto Incidencias Metro -->
+<div class="project-thumb openProjectModal"
+     data-title="Gestión de Incidencias Metro"
+     data-img="images/incidencias-metro.png"
+     data-desc="App de <strong>Power Apps</strong> para registrar y gestionar incidencias en la red de metro. Permite a los empleados reportar incidencias en tiempo real, asignar responsables y hacer seguimiento del estado de resolución. Automatización de notificaciones y generación de informes con <strong>Power Automate</strong> y almacenamiento en <strong>Dataverse</strong>.">
+  <img src="images/Metro.png" alt="Gestión de Incidencias Metro">
+  <div class="project-thumb-title">Incidencias Metro</div>
+  <div class="project-thumb-buttons">
+    <a href="#" class="btn-demo" target="_blank" rel="noopener">
+      <i class="fa-solid fa-play"></i> Demo
+    </a>
+    <a href="#" class="btn-github" target="_blank" rel="noopener">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</div>
+</section>
+</section>
   </section>
+  <section id="habilidades" class="section">
+  <h2>Habilidades</h2>
+  <ul class="skills-list">
+    <li title="Git"><i class="fab fa-git-alt"></i><span>Git</span></li>
+    <li title="Go"><i class="fab fa-golang"></i><span>Golang</span></li>
+    <li title="C++"><i class="fa-solid fa-code"></i><span>C++</span></li>
+    <li title="HTML5"><i class="fab fa-html5"></i><span>HTML</span></li>
+    <li title="CSS3"><i class="fab fa-css3-alt"></i><span>CSS</span></li>
+    <li title="Frontend"><i class="fa-solid fa-laptop-code"></i><span>Frontend</span></li>
+    <li title="Power Platform"><i class="fa-solid fa-bolt"></i><span>Power Platform</span></li>
+    <li title="Visual Studio"><i class="fa-solid fa-desktop"></i><span>Visual Studio</span></li>
+  </ul>
+</section>
+<!-- ...antes de </main>... -->
+<div class="project-modal" id="projectModal">
+  <div class="project-modal-content">
+    <span class="close-modal" id="closeProjectModal">&times;</span>
+    <img id="modalProjectImg" src="" alt="Imagen del proyecto" class="project-modal-img">
+    <h3 id="modalProjectTitle"></h3>
+    <p id="modalProjectDesc"></p>
+  </div>
+</div>
 </main>
 
  <button class="contact-float-btn" title="Contáctame" id="openContactModal">
@@ -133,9 +206,28 @@
   document.getElementById('closeContactModal').onclick = () => {
     contactModal.style.display = 'none';
   };
+
+  // Modal proyectos reutilizable
+  const projectModal = document.getElementById('projectModal');
+  const modalProjectImg = document.getElementById('modalProjectImg');
+  const modalProjectTitle = document.getElementById('modalProjectTitle');
+  const modalProjectDesc = document.getElementById('modalProjectDesc');
+  document.querySelectorAll('.openProjectModal').forEach(btn => {
+    btn.onclick = function() {
+      modalProjectImg.src = this.getAttribute('data-img');
+      modalProjectTitle.textContent = this.getAttribute('data-title');
+      modalProjectDesc.innerHTML = this.getAttribute('data-desc');
+      projectModal.classList.add('show');
+    };
+  });
+  document.getElementById('closeProjectModal').onclick = () => {
+    projectModal.classList.remove('show');
+  };
   window.onclick = (e) => {
     if (e.target === contactModal) contactModal.style.display = 'none';
+    if (e.target === projectModal) projectModal.classList.remove('show');
   };
+</script>
 </script>
 </body>
 </html>

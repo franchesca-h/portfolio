@@ -298,52 +298,45 @@ header {
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 1.5rem;
   justify-content: center;
-  margin-top: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 1rem 0;
+}
+.skills-list li {
+  background: #23272f;
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  font-size: 1.1rem;
+  cursor: pointer;
+  min-width: 90px;
+}
+.skills-list li:hover {
+  transform: scale(1.13) rotate(-3deg);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+  background: #2b3140;
+}
+.skills-list i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+.skills-list li:hover i {
+  color: #ffd700;
 }
 .skills-list span {
-  background: var(--card-bg);
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  border-radius: var(--radius);
-  padding: 4px 10px;
-  font-size: 0.95rem;
+  margin-top: 0.2rem;
+  font-size: 1rem;
   font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 2px 8px rgba(229, 229, 229, 0.08);
-  transition: color 0.3s, background 0.3s, box-shadow 0.3s, border-color 0.3s;
+  letter-spacing: 0.5px;
 }
-.skills-list span:hover {
-  color: var(--highlight);
-  border-color: var(--highlight);
-  background: #23243a;
-  box-shadow: 0 4px 16px rgba(229, 229, 229, 0.18);
-}
-
-.skill-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 6px;
-  vertical-align: middle;
-  transition: transform 0.3s;
-}
-.skills-list span:hover .skill-icon {
-  transform: scale(1.18) rotate(-8deg);
-}
-.skill-icon[alt="Power Platform"] {
-  vertical-align: middle;
-  margin-bottom: 2px;
-  background: #742774;
-  border-radius: 4px;
-  width: 20px;
-  height: 20px;
-  padding: 2px;
-  box-sizing: content-box;
-}
-
 /* Botones */
 .btn-primary, .btn-secondary {
   padding: 16px 40px;
@@ -511,4 +504,138 @@ footer {
 .hero-section::after {
   content: none !important;
   display: none !important;
+}
+/* Modal de proyecto */
+.project-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+.project-modal.show {
+  display: flex;
+}
+.project-modal-content {
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90vw;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  animation: modalIn 0.2s;
+}
+@keyframes modalIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.project-modal-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.close-modal {
+  position: absolute;
+  top: 12px; right: 18px;
+  font-size: 2rem;
+  color: var(--highlight);
+  cursor: pointer;
+}
+
+/* Galería de proyectos moderna */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-thumb {
+  background: linear-gradient(135deg, #23243a 60%, #2d2e4a 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  border: 1.5px solid #292a3a;
+}
+
+.project-thumb:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.22);
+  border-color: #a97fff;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  transition: filter 0.2s;
+}
+
+.project-thumb:hover img {
+  filter: brightness(1.08) saturate(1.2);
+}
+
+.project-thumb-title {
+  padding: 1.1rem 0.5rem 1rem 0.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(0deg, #23243a 90%, transparent 100%);
+  width: 100%;
+  font-size: 1.12rem;
+  letter-spacing: 0.5px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-thumb-buttons {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.btn-demo, .btn-github {
+  background: #fff;
+  color: #23243a;
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+}
+.btn-demo:hover {
+  background: #a97fff;
+  color: #fff;
+  transform: scale(1.07);
+}
+.btn-github:hover {
+  background: #23243a;
+  color: #fff;
+  transform: scale(1.07);
 }
