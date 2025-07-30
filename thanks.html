@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Gracias por tu mensaje!</title>
+  <meta http-equiv="refresh" content="4;url=https://cheky.dev/">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+  body {
+  background: var(--bg) url('images/fondo\ portfolio.png') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25); /* Ajusta la opacidad según necesites */
+  z-index: 0;
+}
+.thanks-container {
+  position: relative;
+  z-index: 1;
+}
+
+    .thanks-container {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 3rem 2.5rem 2.5rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+      margin: 5vh auto 0 auto;
+      text-align: center;
+      animation: fadeInUp 0.7s;
+    }
+    .thanks-container h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 2.1rem;
+      letter-spacing: 1px;
+    }
+    .thanks-container p {
+      color: var(--text);
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+    }
+    .thanks-icon {
+      font-size: 3.5rem;
+      color: var(--highlight);
+      margin-bottom: 1.2rem;
+      animation: pulseGlow 1.5s infinite;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: none;}
+    }
+    @keyframes pulseGlow {
+      0%, 100% { text-shadow: 0 0 12px var(--highlight), 0 0 32px var(--accent);}
+      50% { text-shadow: 0 0 32px var(--highlight), 0 0 64px var(--accent);}
+    }
+
+     .thanks-container {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .thanks-btn {
+      margin-top: 1.5rem;
+      background: var(--highlight);
+      color: var(--primary);
+      border: none;
+      border-radius: var(--radius);
+      padding: 0.7rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px var(--shadow);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .thanks-btn:hover {
+      background: var(--primary);
+      color: var(--highlight);
+      transform: scale(1.06);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <div class="thanks-container">
+    <span class="thanks-icon"><i class="fas fa-paper-plane"></i></span>
+    <h2>¡Gracias por contactarme!</h2>
+    <p>Tu mensaje ha sido enviado correctamente.<br>
+    Te responderé lo antes posible.</p>
+    <p style="font-size:0.98rem; color:var(--highlight);">Serás redirigido a la página principal en unos segundos...</p>
+      <a href="https://cheky.dev/" class="thanks-btn">Volver ahora</a>
+</div>
+</body>
+</html>
+ 

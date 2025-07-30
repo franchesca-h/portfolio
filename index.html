@@ -33,24 +33,27 @@
 
 
 <main>
-  <section class="hero-section">
-    <img src="images/perfil.png" alt="Franchesca Hernández" class="hero-avatar">
+<section class="hero-section">
+  <img src="images/perfil.png" alt="Franchesca Hernández" class="hero-avatar">
+  <h2 class="manuscrito">Franchesca</h2>
   <div class="hero-content">
-    <h1 class="manuscrito">Hola, soy Franchesca</h1>
-    <p>
+    <h1>
       <span id="heroTypewriter"></span>
+    </h1>
+    <p class="hero-desc">
+      Desarrolladora apasionada por crear soluciones elegantes y funcionales.
     </p>
     <div class="hero-buttons">
-        <a href="#proyectos" class="btn-primary">Proyectos</a>
-        <a href="#habilidades" class="btn-secondary">Habilidades</a>
-        <a href="#sobre-mi" class="btn-secondary">Sobre mí</a>
-        <a href="#stack" class="btn-secondary">Stack</a>
-        <a href="https://github.com/franchesca-h" class="btn-secondary" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
+      <a href="#proyectos" class="btn-primary">Proyectos</a>
+      <a href="#habilidades" class="btn-secondary">Habilidades</a>
+      <a href="#sobre-mi" class="btn-secondary">Sobre mí</a>
+      <a href="#stack" class="btn-secondary">Stack</a>
+      <a href="https://github.com/franchesca-h" class="btn-secondary" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="sobre-mi" class="about-section section">
     <h2>Sobre Mí</h2>
@@ -150,38 +153,38 @@
 <div class="contact-modal" id="contactModal">
   <div class="contact-modal-content">
     <span class="close-modal" id="closeContactModal">&times;</span>
-    <h2>Contáctame</h2>
-    <form action="https://formspree.io/f/{tu_codigo}" method="POST" class="contact-form">
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Correo</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="btn-primary">Enviar</button>
-    </form>
+    <h2>Contácto</h2>
+    <form class="contact-form" action="https://formsubmit.co/franchescahernandezv@gmail.com" method="POST">
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text" id="name" name="name" required placeholder="Tu nombre">
   </div>
-</div>
+  <div class="form-group">
+    <label for="email">Correo</label>
+    <input type="email" id="email" name="email" required placeholder="Tu correo">
+  </div>
+  <div class="form-group">
+    <label for="message">Mensaje</label>
+    <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
+  </div>
+  <button type="submit" class="btn-primary">Enviar</button>
+  <input type="hidden" name="_next" value="https://cheky.dev/gracias.html">
+<input type="hidden" name="_captcha" value="false">
+</form>
 
 <footer>
   <p>&copy; 2025 Chekydev. Todos los derechos reservados.</p>
 </footer>
 
 <script>
-  // Efecto máquina de escribir en hero-section
   window.addEventListener('DOMContentLoaded', () => {
-    // Hero typewriter
-    const heroText = "Desarrolladora apasionada por crear soluciones elegantes y funcionales.";
-    const heroTypewriter = document.getElementById('heroTypewriter');
-    if (heroTypewriter) {
-      typeWriter(heroTypewriter, heroText, 80);
-    }
+  
+  const heroText = "Hola, mundo";
+  const heroTypewriter = document.getElementById('heroTypewriter');
+  if (heroTypewriter) {
+    typeWriter(heroTypewriter, heroText, 80);
+  }
+
 
     // Botón cambio de modo con icono dinámico
     const themeBtn = document.getElementById('themeToggle');
