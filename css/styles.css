@@ -121,8 +121,8 @@ nav a:hover {
   padding: 64px 0 48px 0;
 }
 .hero-avatar {
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 240px;
   border-radius: 100%;
   box-shadow: 0 4px 32px var(--card-bg);
   object-fit: cover;
