@@ -82,14 +82,14 @@
   <!-- Gestión de Supermercado -->
   <div class="project-thumb openProjectModal"
        data-title="Gestión de Supermercado"
-       data-img="images/SuperMarket.png"
+       data-img="images/SuperMarket2.png"
        data-desc="Solución para la gestión de inventario, ventas y pedidos en supermercados. Incluye paneles de control, reportes automáticos y pedidos inteligentes a proveedores. Desarrollada con <strong>Power Apps</strong> y <strong>Power Automate</strong>, con datos seguros en <strong>Dataverse</strong>.">
-    <img src="images/SuperMarket.png" alt="Gestión de Supermercado">
+    <img src="images/SuperMarket2.png" alt="Gestión de Supermercado">
     <div class="project-thumb-title">Gestión de Supermercado</div>
     <div class="project-thumb-buttons">
       <button class="btn-demo openProjectModal" type="button"
         data-title="Gestión de Supermercado"
-        data-img="images/SuperMarket.png"
+        data-img="images/SuperMarket2.png"
         data-desc="Solución para la gestión de inventario, ventas y pedidos en supermercados. Incluye paneles de control, reportes automáticos y pedidos inteligentes a proveedores. Desarrollada con <strong>Power Apps</strong> y <strong>Power Automate</strong>, con datos seguros en <strong>Dataverse</strong>.">
         <i class="fa-solid fa-info-circle"></i> Detalles
       </button>
@@ -216,10 +216,25 @@
     const modalProjectDesc = document.getElementById('modalProjectDesc');
     document.querySelectorAll('.openProjectModal').forEach(btn => {
       btn.onclick = function() {
-        modalProjectImg.src = this.getAttribute('data-img');
-        modalProjectTitle.textContent = this.getAttribute('data-title');
-        typeWriter(modalProjectDesc, this.getAttribute('data-desc'), 60);
+        const imgSrc = this.getAttribute('data-img');
+        const title = this.getAttribute('data-title');
+        const desc = this.getAttribute('data-desc');
+        
+        console.log('Opening modal for:', title);
+        console.log('Image source:', imgSrc);
+        
+        modalProjectImg.src = imgSrc;
+        modalProjectTitle.textContent = title;
+        typeWriter(modalProjectDesc, desc, 60);
         projectModal.classList.add('show');
+        
+        // Verificar si la imagen se carga correctamente
+        modalProjectImg.onload = function() {
+          console.log('Image loaded successfully:', imgSrc);
+        };
+        modalProjectImg.onerror = function() {
+          console.error('Error loading image:', imgSrc);
+        };
       };
     });
     document.getElementById('closeProjectModal').onclick = () => {
