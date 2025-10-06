@@ -65,7 +65,7 @@
   <!-- Protectora de Animales -->
   <div class="project-thumb openProjectModal"
        data-title="Protectora de Animales"
-       data-img="images/protectora-animales.png"
+       data-img="images/ProtectoraPets.png"
        data-desc="App integral para la gestión de una protectora de animales. Permite registrar mascotas, gestionar adopciones, controlar el historial veterinario y automatizar recordatorios de vacunas y revisiones. Todo centralizado y seguro gracias a <strong>Power Apps</strong>, <strong>Power Automate</strong> y <strong>Dataverse</strong>.">
     <img src="images/ProtectoraPets.png" alt="Protectora de Animales">
     <div class="project-thumb-title">Protectora de Animales</div>
@@ -106,7 +106,7 @@
     <div class="project-thumb-buttons">
       <button class="btn-demo openProjectModal" type="button"
         data-title="Incidencias Metro"
-        data-img="Metro.png"
+        data-img="images/Metro.png"
         data-desc="Aplicación para registrar y gestionar incidencias en la red de metro. Los empleados pueden reportar problemas en tiempo real, asignar responsables y seguir el estado de resolución. Notificaciones y reportes automáticos con <strong>Power Automate</strong> y almacenamiento en <strong>Dataverse</strong>.">
         <i class="fa-solid fa-info-circle"></i> Detalles
       </button>
@@ -237,8 +237,21 @@
 
     function typing() {
       if (i < html.length) {
-        cursor.before(document.createTextNode(html.charAt(i)));
-        i++;
+        if (html.charAt(i) === '<') {
+          // Si encontramos una etiqueta HTML, la añadimos completa
+          let tagEnd = html.indexOf('>', i);
+          if (tagEnd !== -1) {
+            let tag = html.substring(i, tagEnd + 1);
+            cursor.insertAdjacentHTML('beforebegin', tag);
+            i = tagEnd + 1;
+          } else {
+            cursor.before(document.createTextNode(html.charAt(i)));
+            i++;
+          }
+        } else {
+          cursor.before(document.createTextNode(html.charAt(i)));
+          i++;
+        }
         setTimeout(typing, speed);
       } else {
         element.innerHTML = html;
