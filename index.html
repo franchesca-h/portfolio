@@ -8,113 +8,187 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <meta name="description" content="Portafolio de Franchesca Hernández, desarrolladora especializada en Microsoft Power Platform y automatización de procesos empresariales.">
   <meta name="keywords" content="Franchesca Hernández, desarrolladora, Power Platform, Power Apps, Power Automate, Power BI, Dataverse, Golang, C++, Flutter, Docker, Git">
   <meta name="author" content="Franchesca Hernández Vasquez">
 </head>
 
-<body>
- <button id="themeToggle" class="theme-toggle" title="Cambiar modo">
+<body class="dark-mode">
+<button id="themeToggle" class="theme-toggle" title="Cambiar modo">
   <i id="themeIcon" class="fas fa-moon"></i>
 </button>
 
-<header>
-  <nav>
-    <div class="logo">Chekydev</div>
-    <ul>
+<!-- HEADER MODULE -->
+<header class="header-module">
+  <nav class="header-nav">
+      <div class="header-brand">
+        <span class="site-title cursive-title">Franchesca Hernández</span>
+    <span class="site-role">Desarrolladora Full-Stack & Automatización</span>
+      </div>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre Mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#habilidades-experiencia">Habilidades</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="https://github.com/franchesca-h" target="_blank" class="github-link"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://instagram.com/cheky.dev" target="_blank" class="instagram-link"><i class="fab fa-instagram"></i></a></li>
+    </ul>
   </nav>
-
+</header>
 
 <main>
-<section class="hero-section">
-  <img src="images/Foto_perfil.png" alt="Franchesca Hernández" class="hero-avatar">
-  <h2 class="manuscrito">Franchesca</h2>
-  <div class="hero-content">
-    <h1>
-      <span id="heroTypewriter"></span>
-    </h1>
-    <p class="hero-desc">
-      Desarrolladora apasionada por crear soluciones elegantes y funcionales.
-    </p>
-    <div class="hero-buttons">
-      <a href="#proyectos" class="btn-primary">Proyectos</a>
-      <a href="#habilidades" class="btn-secondary">Habilidades</a>
-      <a href="#sobre-mi" class="btn-secondary">Sobre mí</a>
-      <a href="#stack" class="btn-secondary">Stack</a>
-      <a href="https://github.com/franchesca-h" class="btn-secondary" target="_blank">
-        <i class="fab fa-github"></i> GitHub
-      </a>
+  <!-- MODULO 1: SOBRE MI -->
+  <section id="sobre-mi" class="module module-about">
+    <div class="module-content">
+      <div class="about-hero">
+        <div class="about-logo-section">
+          <div class="logo-float-wrapper">
+            <img src="images/logo_animado.png" id="logo3d" class="logo-3d" alt="Cheky Logo">
+          </div>
+        </div>
+        <div class="about-text">
+          <h1 class="module-title">Sobre Mí</h1>
+          <p class="about-intro">
+            Soy <strong>Franchesca Hernández</strong>, Desarrolladora Full-Stack y Especialista en Automatización.
+          </p>
+          <p class="about-description">
+            Busco aportar valor en equipos que apuestan por la innovación y la mejora continua. Mis fortalezas incluyen:
+          </p>
+          <div class="about-features">
+            <div class="feature-item">
+              <h3>Desarrollo Web Full-Stack</h3>
+              <p>Creación de APIs y lógica de negocio con PHP/Laravel, y desarrollo de frontend con JavaScript y tecnologías CSS modernas.</p>
+            </div>
+            <div class="feature-item">
+              <h3>Automatización de Procesos</h3>
+              <p>Amplia experiencia en el ecosistema Microsoft Power Platform (Power Apps, Power Automate, Power BI, Dataverse).</p>
+            </div>
+            <div class="feature-item">
+              <h3>Habilidades Técnicas Adicionales</h3>
+              <p>Conocimientos sólidos en Go, C++, Docker y bases de datos relacionales.</p>
+            </div>
+            <div class="feature-item">
+              <h3>Formación Técnica</h3>
+              <p>Certificado de Profesionalidad de Nivel 3 en Programación de Sistemas Informáticos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-  <section id="sobre-mi" class="about-section section">
-    <h2>Sobre Mí</h2>
-    <p>
-      Soy Franchesca Hernández, desarrolladora especializada en el ecosistema <strong>Microsoft Power Platform</strong> y en la automatización de procesos empresariales. Tengo experiencia creando aplicaciones con <strong>Power Apps</strong>, automatizando flujos con <strong>Power Automate</strong> y analizando datos con <strong>Power BI</strong>, además de integrar soluciones con <strong>Dataverse</strong> y otras herramientas de Microsoft.<br><br>
-      Complemento mi perfil con conocimientos sólidos en <strong>Go</strong>, <strong>C++</strong> y <strong>Flutter</strong>, así como experiencia en el uso de <strong>Docker</strong>, <strong>Git</strong> y bases de datos relacionales.<br><br>
-      Cuento con un <strong>Certificado de Profesionalidad de Nivel 3 en Programación de Sistemas Informáticos</strong>, lo que avala mi formación técnica y mi capacidad para abordar proyectos complejos.<br><br>
-      Me apasiona la transformación digital, el aprendizaje continuo y la creación de soluciones limpias, eficientes y alineadas con las necesidades del negocio. Busco aportar valor en equipos que apuesten por la innovación y la mejora continua.
-    </p>
   </section>
 
-  <section id="proyectos" class="section">
-    <h2>Proyectos Destacados</h2>
-   <div class="projects-gallery">
-  <!-- Protectora de Animales -->
-  <div class="project-thumb openProjectModal"
-       data-title="Protectora de Animales"
-       data-img="images/ProtectoraPets.png"
-       data-desc="App integral para la gestión de una protectora de animales. Permite registrar mascotas, gestionar adopciones, controlar el historial veterinario y automatizar recordatorios de vacunas y revisiones. Todo centralizado y seguro gracias a <strong>Power Apps</strong>, <strong>Power Automate</strong> y <strong>Dataverse</strong>.">
-    <img src="images/ProtectoraPets.png" alt="Protectora de Animales">
-    <div class="project-thumb-title">Protectora de Animales</div>
-    <div class="project-thumb-buttons">
-      <button class="btn-demo openProjectModal" type="button"
-        data-title="Protectora de Animales"
-        data-img="images/ProtectoraPets.png"
-        data-desc="App integral para la gestión de una protectora de animales. Permite registrar mascotas, gestionar adopciones, controlar el historial veterinario y automatizar recordatorios de vacunas y revisiones. Todo centralizado y seguro gracias a <strong>Power Apps</strong>, <strong>Power Automate</strong> y <strong>Dataverse</strong>.">
-        <i class="fa-solid fa-info-circle"></i> Detalles
-      </button>
+  <!-- MODULO 2: PROYECTOS -->
+  <section id="proyectos" class="module module-projects">
+    <div class="module-content">
+      <h2 class="module-title">Proyectos Destacados</h2>
+      <div class="projects-carousel-container">
+        <button class="carousel-btn prev" aria-label="Proyecto anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="projects-carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <div class="project-card-slide" onclick="window.location.href='proyectos.html#dress-dolly'">
+                <div class="project-image-container">
+                  <img src="images/Flutter.webp" alt="Dress Dolly App">
+                </div>
+                <div class="project-content">
+                  <h3>Dress Dolly App</h3>
+                  <p>App móvil multiplataforma desarrollada con Flutter para diseñar y vestir muñecas. Incluye herramientas de dibujo avanzadas, sistema de capas, múltiples usuarios y logros desbloqueables.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="project-card-slide" onclick="window.location.href='proyectos.html#tooltips'">
+                <div class="project-image-container">
+                  <img src="images/tooltip_1.png" alt="Ejemplos de Tooltips">
+                </div>
+                <div class="project-content">
+                  <h3>Ejemplos de Tooltips</h3>
+                  <p>Implementaciones prácticas de tooltips usando Bootstrap 5. Incluye formularios, botones, tablas y contenido HTML con tooltips personalizables.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="project-card-slide" onclick="window.location.href='proyectos.html#hoja-reclamaciones'">
+                <div class="project-image-container">
+                  <img src="images/libro_reclamo_1.png" alt="Hoja de Reclamaciones">
+                </div>
+                <div class="project-content">
+                  <h3>Hoja de Reclamaciones</h3>
+                  <p>Sistema para gestionar hojas de reclamaciones. Permite registrar, gestionar y hacer seguimiento de reclamaciones de manera eficiente.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="project-card-slide" onclick="window.location.href='proyectos.html#google-meet'">
+                <div class="project-image-container">
+                  <img src="images/google_meet_1.png" alt="Google Meet">
+                </div>
+                <div class="project-content">
+                  <h3>Google Meet</h3>
+                  <p>Integración automática de reuniones Google Meet en Laravel. Incluye ejemplos de código, configuración y galería visual de la implementación.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="project-card-slide" onclick="window.location.href='proyectos.html'">
+                <div class="project-image-container">
+        <img src="images/ProtectoraPets.png" alt="Protectora de Animales">
+                </div>
+                <div class="project-content">
+        <h3>Protectora de Animales</h3>
+        <p>App integral para la gestión de una protectora de animales. Permite registrar mascotas, gestionar adopciones, controlar el historial veterinario y automatizar recordatorios de vacunas y revisiones.</p>
+      </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="project-card-slide" onclick="window.location.href='proyectos.html'">
+                <div class="project-image-container">
+        <img src="images/SuperMarket.png" alt="Gestión de Supermercado">
+                </div>
+                <div class="project-content">
+        <h3>Gestión de Supermercado</h3>
+        <p>Solución para la gestión de inventario, ventas y pedidos en supermercados. Incluye paneles de control, reportes automáticos y pedidos inteligentes a proveedores.</p>
+      </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="project-card-slide" onclick="window.location.href='proyectos.html'">
+                <div class="project-image-container">
+        <img src="images/Metro.png" alt="Incidencias Metro">
+                </div>
+                <div class="project-content">
+        <h3>Incidencias Metro</h3>
+        <p>Aplicación para registrar y gestionar incidencias en la red de metro. Los empleados pueden reportar problemas en tiempo real, asignar responsables y seguir el estado de resolución.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Proyecto siguiente">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="carousel-indicators">
+          <span class="indicator active" data-slide="0"></span>
+          <span class="indicator" data-slide="1"></span>
+          <span class="indicator" data-slide="2"></span>
+          <span class="indicator" data-slide="3"></span>
+          <span class="indicator" data-slide="4"></span>
+          <span class="indicator" data-slide="5"></span>
+          <span class="indicator" data-slide="6"></span>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Gestión de Supermercado -->
-  <div class="project-thumb openProjectModal"
-       data-title="Gestión de Supermercado"
-       data-img="images/SuperMarket.png"
-       data-desc="Solución para la gestión de inventario, ventas y pedidos en supermercados. Incluye paneles de control, reportes automáticos y pedidos inteligentes a proveedores. Desarrollada con <strong>Power Apps</strong> y <strong>Power Automate</strong>, con datos seguros en <strong>Dataverse</strong>.">
-    <img src="images/SuperMarket.png" alt="Gestión de Supermercado">
-    <div class="project-thumb-title">Gestión de Supermercado</div>
-    <div class="project-thumb-buttons">
-      <button class="btn-demo openProjectModal" type="button"
-        data-title="Gestión de Supermercado"
-        data-img="images/SuperMarket.png"
-        data-desc="Solución para la gestión de inventario, ventas y pedidos en supermercados. Incluye paneles de control, reportes automáticos y pedidos inteligentes a proveedores. Desarrollada con <strong>Power Apps</strong> y <strong>Power Automate</strong>, con datos seguros en <strong>Dataverse</strong>.">
-        <i class="fa-solid fa-info-circle"></i> Detalles
-      </button>
-    </div>
-  </div>
-
-  <!-- Incidencias Metro -->
-  <div class="project-thumb openProjectModal"
-       data-title="Incidencias Metro"
-       data-img="images/Metro.png"
-       data-desc="Aplicación para registrar y gestionar incidencias en la red de metro. Los empleados pueden reportar problemas en tiempo real, asignar responsables y seguir el estado de resolución. Notificaciones y reportes automáticos con <strong>Power Automate</strong> y almacenamiento en <strong>Dataverse</strong>.">
-    <img src="images/Metro.png" alt="Incidencias Metro">
-    <div class="project-thumb-title">Incidencias Metro</div>
-    <div class="project-thumb-buttons">
-      <button class="btn-demo openProjectModal" type="button"
-        data-title="Incidencias Metro"
-        data-img="images/Metro.png""
-        data-desc="Aplicación para registrar y gestionar incidencias en la red de metro. Los empleados pueden reportar problemas en tiempo real, asignar responsables y seguir el estado de resolución. Notificaciones y reportes automáticos con <strong>Power Automate</strong> y almacenamiento en <strong>Dataverse</strong>.">
-        <i class="fa-solid fa-info-circle"></i> Detalles
-      </button>
-    </div>
-  </div>
-</div>
-Metro.png
+  <!-- MODULO 3: HABILIDADES Y EXPERIENCIA -->
+  <section id="habilidades-experiencia" class="module module-skills">
+    <div class="module-content">
+      <h2 class="module-title">Habilidades y Experiencia</h2>
+      <div class="skills-section">
     <ul class="skills-list">
+      <li title="Flutter"><i class="fa-solid fa-mobile-screen-button"></i><span>Flutter</span></li>
       <li title="Git"><i class="fab fa-git-alt"></i><span>Git</span></li>
       <li title="Go"><i class="fab fa-golang"></i><span>Golang</span></li>
       <li title="C++"><i class="fa-solid fa-code"></i><span>C++</span></li>
@@ -124,28 +198,16 @@ Metro.png
       <li title="Power Platform"><i class="fa-solid fa-bolt"></i><span>Power Platform</span></li>
       <li title="Visual Studio"><i class="fa-solid fa-desktop"></i><span>Visual Studio</span></li>
     </ul>
+      </div>
+    </div>
   </section>
 
-  <div class="project-modal" id="projectModal">
-    <div class="project-modal-content">
-      <span class="close-modal" id="closeProjectModal">&times;</span>
-      <img id="modalProjectImg" src="" alt="Imagen del proyecto" class="project-modal-img">
-      <h3 id="modalProjectTitle"></h3>
-      <p id="modalProjectDesc"></p>
-    </div>
-  </div>
-</main>
-
-<!-- Botón flotante -->
-<button class="contact-float-btn" title="Contáctame" id="openContactModal">
-  <i class="fas fa-envelope"></i>
-</button>
-
-<!-- Modal de contacto -->
-<div class="contact-modal" id="contactModal">
-  <div class="contact-modal-content">
-    <span class="close-modal" id="closeContactModal">&times;</span>
-    <h2>Contácto</h2>
+  <!-- MODULO 4: CONTACTO -->
+  <section id="contacto" class="module module-contact">
+    <div class="module-content">
+      <h2 class="module-title">Contacto</h2>
+      <div class="contact-content">
+        <p class="contact-intro">¿Tienes un proyecto en mente? Me encantaría escucharte y trabajar contigo.</p>
     <form class="contact-form" action="https://formsubmit.co/franchescahernandezv@gmail.com" method="POST">
   <div class="form-group">
     <label for="name">Nombre</label>
@@ -163,10 +225,31 @@ Metro.png
   <input type="hidden" name="_next" value="https://cheky.dev/gracias.html">
 <input type="hidden" name="_captcha" value="false">
 </form>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Chekydev. Todos los derechos reservados.</p>
-</footer>
+  <!-- Modal de proyecto (mantener para futuras funcionalidades) -->
+  <div class="project-modal" id="projectModal">
+    <div class="project-modal-content">
+      <span class="close-modal" id="closeProjectModal">&times;</span>
+      <img id="modalProjectImg" src="" alt="Imagen del proyecto" class="project-modal-img">
+      <h3 id="modalProjectTitle"></h3>
+      <p id="modalProjectDesc"></p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer-module">
+    <p>&copy; 2025 Chekydev. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón flotante de contacto -->
+  <a href="#contacto" class="contact-float-btn" aria-label="Ir a contacto" title="Contacto">
+    <i class="fas fa-envelope"></i>
+  </a>
+
+  <script src="js/script.js"></script>
 
 <script>
   window.addEventListener('DOMContentLoaded', () => {
@@ -178,40 +261,32 @@ Metro.png
   }
 
 
-    // Botón cambio de modo con icono dinámico
-    const themeBtn = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    if (themeBtn && themeIcon) {
-      themeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        if (document.body.classList.contains('dark-mode')) {
-          themeIcon.classList.remove('fa-moon');
-          themeIcon.classList.add('fa-sun');
-        } else {
-          themeIcon.classList.remove('fa-sun');
-          themeIcon.classList.add('fa-moon');
-        }
-      });
-    }
 
-    // Modal contacto
+    // Modal contacto (solo si existe)
     const contactModal = document.getElementById('contactModal');
-    document.getElementById('openContactModal').onclick = () => {
+    const openContactModal = document.getElementById('openContactModal');
+    const closeContactModal = document.getElementById('closeContactModal');
+    
+    if (openContactModal && contactModal) {
+      openContactModal.onclick = () => {
       contactModal.classList.add('show');
     };
-    document.getElementById('closeContactModal').onclick = () => {
+    }
+    
+    if (closeContactModal && contactModal) {
+      closeContactModal.onclick = () => {
       contactModal.classList.remove('show');
     };
-    window.onclick = (e) => {
-      if (e.target === contactModal) contactModal.classList.remove('show');
-      if (e.target === projectModal) projectModal.classList.remove('show');
-    };
+    }
 
-    // Modal proyectos
+    // Modal proyectos (solo si existe)
     const projectModal = document.getElementById('projectModal');
     const modalProjectImg = document.getElementById('modalProjectImg');
     const modalProjectTitle = document.getElementById('modalProjectTitle');
     const modalProjectDesc = document.getElementById('modalProjectDesc');
+    const closeProjectModal = document.getElementById('closeProjectModal');
+    
+    if (projectModal && modalProjectImg && modalProjectTitle && modalProjectDesc) {
     document.querySelectorAll('.openProjectModal').forEach(btn => {
       btn.onclick = function() {
         modalProjectImg.src = this.getAttribute('data-img');
@@ -220,8 +295,22 @@ Metro.png
         projectModal.classList.add('show');
       };
     });
-    document.getElementById('closeProjectModal').onclick = () => {
+    }
+    
+    if (closeProjectModal && projectModal) {
+      closeProjectModal.onclick = () => {
+        projectModal.classList.remove('show');
+      };
+    }
+    
+    // Cerrar modales al hacer click fuera
+    window.onclick = (e) => {
+      if (contactModal && e.target === contactModal) {
+        contactModal.classList.remove('show');
+      }
+      if (projectModal && e.target === projectModal) {
       projectModal.classList.remove('show');
+      }
     };
   });
 
