@@ -289,10 +289,25 @@
     if (projectModal && modalProjectImg && modalProjectTitle && modalProjectDesc) {
     document.querySelectorAll('.openProjectModal').forEach(btn => {
       btn.onclick = function() {
-        modalProjectImg.src = this.getAttribute('data-img');
-        modalProjectTitle.textContent = this.getAttribute('data-title');
-        typeWriter(modalProjectDesc, this.getAttribute('data-desc'), 60);
+        const imgSrc = this.getAttribute('data-img');
+        const title = this.getAttribute('data-title');
+        const desc = this.getAttribute('data-desc');
+        
+        console.log('Opening modal for:', title);
+        console.log('Image source:', imgSrc);
+        
+        modalProjectImg.src = imgSrc;
+        modalProjectTitle.textContent = title;
+        typeWriter(modalProjectDesc, desc, 60);
         projectModal.classList.add('show');
+        
+        // Verificar si la imagen se carga correctamente
+        modalProjectImg.onload = function() {
+          console.log('Image loaded successfully:', imgSrc);
+        };
+        modalProjectImg.onerror = function() {
+          console.error('Error loading image:', imgSrc);
+        };
       };
     });
     }
@@ -324,8 +339,21 @@
 
     function typing() {
       if (i < html.length) {
-        cursor.before(document.createTextNode(html.charAt(i)));
-        i++;
+        if (html.charAt(i) === '<') {
+          // Si encontramos una etiqueta HTML, la añadimos completa
+          let tagEnd = html.indexOf('>', i);
+          if (tagEnd !== -1) {
+            let tag = html.substring(i, tagEnd + 1);
+            cursor.insertAdjacentHTML('beforebegin', tag);
+            i = tagEnd + 1;
+          } else {
+            cursor.before(document.createTextNode(html.charAt(i)));
+            i++;
+          }
+        } else {
+          cursor.before(document.createTextNode(html.charAt(i)));
+          i++;
+        }
         setTimeout(typing, speed);
       } else {
         element.innerHTML = html;
