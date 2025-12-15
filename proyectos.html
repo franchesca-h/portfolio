@@ -10,8 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body class="dark-mode">
-  <button id="themeToggle" class="theme-toggle" title="Cambiar modo">
+  <button id="themeToggle" class="theme-toggle" data-i18n-title="theme.toggle" title="Cambiar modo">
     <i id="themeIcon" class="fas fa-moon"></i>
+  </button>
+  <button id="langToggle" class="lang-toggle" data-i18n-title="lang.toggle" title="Cambiar idioma">
+    <i class="fas fa-globe"></i> ES
   </button>
   
 <!-- HEADER MODULE -->
@@ -19,22 +22,22 @@
   <nav class="header-nav">
       <div class="header-brand">
         <span class="site-title cursive-title">Franchesca Hernández</span>
-    <span class="site-role">Desarrolladora Full-Stack & Automatización</span>
+    <span class="site-role" data-i18n="header.role">Desarrolladora Full-Stack & Automatización</span>
       </div>
-    <ul class="nav-links">
-      <li><a href="index.html#sobre-mi">Sobre Mí</a></li>
-      <li><a href="index.html#proyectos">Proyectos</a></li>
-      <li><a href="index.html#habilidades-experiencia">Habilidades</a></li>
-      <li><a href="index.html#contacto">Contacto</a></li>
+      <ul class="nav-links">
+      <li><a href="index.html#sobre-mi" data-i18n="nav.about">Sobre Mí</a></li>
+      <li><a href="index.html#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="index.html#habilidades-experiencia" data-i18n="nav.skills">Habilidades</a></li>
+      <li><a href="index.html#contacto" data-i18n="nav.contact">Contacto</a></li>
       <li><a href="https://github.com/franchesca-h" target="_blank" class="github-link"><i class="fab fa-github"></i></a></li>
       <li><a href="https://instagram.com/cheky.dev" target="_blank" class="instagram-link"><i class="fab fa-instagram"></i></a></li>
-    </ul>
-  </nav>
-</header>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section class="all-projects-section">
-      <h1 class="module-title">Todos los Proyectos</h1>
+      <h1 class="module-title" data-i18n="projects.all.title">Todos los Proyectos</h1>
       <div class="all-projects-grid">
         <!-- 1. DRESS DOLLY APP (FLUTTER) -->
         <article id="dress-dolly" class="project-detail-card">
@@ -125,8 +128,8 @@
                 <source src="videos/tooltips_demo.mp4" type="video/mp4">
                 Tu navegador no soporta el video HTML5.
             </video>
-            </div>
           </div>
+        </div>
         </article>
 
         <!-- 3. HOJA DE RECLAMACIONES -->
@@ -138,7 +141,7 @@
           
           <div class="project-gallery-section">
             <h3 class="gallery-title"><i class="fas fa-images"></i> Imágenes del Proyecto</h3>
-            <div class="project-gallery">
+          <div class="project-gallery">
               <div class="gallery-item">
                 <img src="images/libro_reclamo_1.png" alt="Libro de Reclamo" loading="lazy">
               </div>
@@ -278,20 +281,25 @@
                 <source src="videos/metro_demo.mp4" type="video/mp4">
                 Tu navegador no soporta el video HTML5.
             </video>
-            </div>
           </div>
+        </div>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="footer-module">
-    <p>&copy; 2025 Chekydev. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Chekydev. <span data-i18n="footer.copyright">Todos los derechos reservados.</span></p>
   </footer>
 
   <!-- Botón flotante de contacto -->
-  <a href="index.html#contacto" class="contact-float-btn" aria-label="Ir a contacto" title="Contacto">
+  <a href="index.html#contacto" class="contact-float-btn" data-i18n-aria="contact.button.aria" data-i18n-title="contact.button" aria-label="Ir a contacto" title="Contacto">
     <i class="fas fa-envelope"></i>
+  </a>
+
+  <!-- Botón flotante de Instagram -->
+  <a href="https://instagram.com/cheky.dev" target="_blank" rel="noopener noreferrer" class="instagram-float-btn" aria-label="Ir a Instagram" title="Instagram">
+    <i class="fab fa-instagram"></i>
   </a>
 
   <script src="js/script.js"></script>

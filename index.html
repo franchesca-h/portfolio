@@ -14,8 +14,11 @@
 </head>
 
 <body class="dark-mode">
-<button id="themeToggle" class="theme-toggle" title="Cambiar modo">
+<button id="themeToggle" class="theme-toggle" data-i18n-title="theme.toggle" title="Cambiar modo">
   <i id="themeIcon" class="fas fa-moon"></i>
+</button>
+<button id="langToggle" class="lang-toggle" data-i18n-title="lang.toggle" title="Cambiar idioma">
+  <i class="fas fa-globe"></i> ES
 </button>
 
 <!-- HEADER MODULE -->
@@ -23,13 +26,13 @@
   <nav class="header-nav">
       <div class="header-brand">
         <span class="site-title cursive-title">Franchesca Hernández</span>
-    <span class="site-role">Desarrolladora Full-Stack & Automatización</span>
+    <span class="site-role" data-i18n="header.role">Desarrolladora w eb y apps móviles</span>
       </div>
     <ul class="nav-links">
-      <li><a href="#sobre-mi">Sobre Mí</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#habilidades-experiencia">Habilidades</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#sobre-mi" data-i18n="nav.about">Sobre Mí</a></li>
+      <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="#habilidades-experiencia" data-i18n="nav.skills">Habilidades</a></li>
+      <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
       <li><a href="https://github.com/franchesca-h" target="_blank" class="github-link"><i class="fab fa-github"></i></a></li>
       <li><a href="https://instagram.com/cheky.dev" target="_blank" class="instagram-link"><i class="fab fa-instagram"></i></a></li>
     </ul>
@@ -43,33 +46,38 @@
       <div class="about-hero">
         <div class="about-logo-section">
           <div class="logo-float-wrapper">
-            <img src="images/logo_animado.png" id="logo3d" class="logo-3d" alt="Cheky Logo">
+            <div class="logo-wrapper">
+              <img src="images/logo-base.png" class="layer base" alt="Logo base">
+              <img src="images/logo-hair.png" class="layer hair" alt="Logo hair">
+              <img src="images/logo-eye.png" class="layer eyes" alt="Logo eyes">
+              <img src="images/logo-glow-outline.png" class="layer glow-outline" alt="Logo glow">
+            </div>
           </div>
         </div>
         <div class="about-text">
-          <h1 class="module-title">Sobre Mí</h1>
-          <p class="about-intro">
+          <h1 class="module-title" data-i18n="about.title">Sobre Mí</h1>
+          <p class="about-intro" data-i18n="about.intro">
             Soy <strong>Franchesca Hernández</strong>, Desarrolladora Full-Stack y Especialista en Automatización.
           </p>
-          <p class="about-description">
+          <p class="about-description" data-i18n="about.description">
             Busco aportar valor en equipos que apuestan por la innovación y la mejora continua. Mis fortalezas incluyen:
           </p>
           <div class="about-features">
             <div class="feature-item">
-              <h3>Desarrollo Web Full-Stack</h3>
-              <p>Creación de APIs y lógica de negocio con PHP/Laravel, y desarrollo de frontend con JavaScript y tecnologías CSS modernas.</p>
+              <h3 data-i18n="about.feature1.title">Desarrollo Web Full-Stack</h3>
+              <p data-i18n="about.feature1.desc">Creación de APIs y lógica de negocio con PHP/Laravel, y desarrollo de frontend con JavaScript y tecnologías CSS modernas.</p>
             </div>
             <div class="feature-item">
-              <h3>Automatización de Procesos</h3>
-              <p>Amplia experiencia en el ecosistema Microsoft Power Platform (Power Apps, Power Automate, Power BI, Dataverse).</p>
+              <h3 data-i18n="about.feature2.title">Automatización de Procesos</h3>
+              <p data-i18n="about.feature2.desc">Amplia experiencia en el ecosistema Microsoft Power Platform (Power Apps, Power Automate, Power BI, Dataverse).</p>
             </div>
             <div class="feature-item">
-              <h3>Habilidades Técnicas Adicionales</h3>
-              <p>Conocimientos sólidos en Go, C++, Docker y bases de datos relacionales.</p>
+              <h3 data-i18n="about.feature3.title">Habilidades Técnicas Adicionales</h3>
+              <p data-i18n="about.feature3.desc">Conocimientos sólidos en Go, C++, Docker y bases de datos relacionales.</p>
             </div>
             <div class="feature-item">
-              <h3>Formación Técnica</h3>
-              <p>Certificado de Profesionalidad de Nivel 3 en Programación de Sistemas Informáticos.</p>
+              <h3 data-i18n="about.feature4.title">Formación Técnica</h3>
+              <p data-i18n="about.feature4.desc">Certificado de Profesionalidad de Nivel 3 en Programación de Sistemas Informáticos.</p>
             </div>
           </div>
         </div>
@@ -80,9 +88,9 @@
   <!-- MODULO 2: PROYECTOS -->
   <section id="proyectos" class="module module-projects">
     <div class="module-content">
-      <h2 class="module-title">Proyectos Destacados</h2>
+      <h2 class="module-title" data-i18n="projects.title">Proyectos Destacados</h2>
       <div class="projects-carousel-container">
-        <button class="carousel-btn prev" aria-label="Proyecto anterior">
+        <button class="carousel-btn prev" data-i18n-aria="projects.prev" aria-label="Proyecto anterior">
           <i class="fas fa-chevron-left"></i>
         </button>
         <div class="projects-carousel">
@@ -93,8 +101,8 @@
                   <img src="images/Flutter.webp" alt="Dress Dolly App">
                 </div>
                 <div class="project-content">
-                  <h3>Dress Dolly App</h3>
-                  <p>App móvil multiplataforma desarrollada con Flutter para diseñar y vestir muñecas. Incluye herramientas de dibujo avanzadas, sistema de capas, múltiples usuarios y logros desbloqueables.</p>
+                  <h3 data-i18n="projects.dressdolly.title">Dress Dolly App</h3>
+                  <p data-i18n="projects.dressdolly.desc">App móvil multiplataforma desarrollada con Flutter para diseñar y vestir muñecas. Incluye herramientas de dibujo avanzadas, sistema de capas, múltiples usuarios y logros desbloqueables.</p>
                 </div>
               </div>
             </div>
@@ -104,8 +112,8 @@
                   <img src="images/tooltip_1.png" alt="Ejemplos de Tooltips">
                 </div>
                 <div class="project-content">
-                  <h3>Ejemplos de Tooltips</h3>
-                  <p>Implementaciones prácticas de tooltips usando Bootstrap 5. Incluye formularios, botones, tablas y contenido HTML con tooltips personalizables.</p>
+                  <h3 data-i18n="projects.tooltips.title">Ejemplos de Tooltips</h3>
+                  <p data-i18n="projects.tooltips.desc">Implementaciones prácticas de tooltips usando Bootstrap 5. Incluye formularios, botones, tablas y contenido HTML con tooltips personalizables.</p>
                 </div>
               </div>
             </div>
@@ -115,8 +123,8 @@
                   <img src="images/libro_reclamo_1.png" alt="Hoja de Reclamaciones">
                 </div>
                 <div class="project-content">
-                  <h3>Hoja de Reclamaciones</h3>
-                  <p>Sistema para gestionar hojas de reclamaciones. Permite registrar, gestionar y hacer seguimiento de reclamaciones de manera eficiente.</p>
+                  <h3 data-i18n="projects.reclamaciones.title">Hoja de Reclamaciones</h3>
+                  <p data-i18n="projects.reclamaciones.desc">Sistema para gestionar hojas de reclamaciones. Permite registrar, gestionar y hacer seguimiento de reclamaciones de manera eficiente.</p>
                 </div>
               </div>
             </div>
@@ -126,8 +134,8 @@
                   <img src="images/google_meet_1.png" alt="Google Meet">
                 </div>
                 <div class="project-content">
-                  <h3>Google Meet</h3>
-                  <p>Integración automática de reuniones Google Meet en Laravel. Incluye ejemplos de código, configuración y galería visual de la implementación.</p>
+                  <h3 data-i18n="projects.googlemeet.title">Google Meet</h3>
+                  <p data-i18n="projects.googlemeet.desc">Integración automática de reuniones Google Meet en Laravel. Incluye ejemplos de código, configuración y galería visual de la implementación.</p>
                 </div>
               </div>
             </div>
@@ -137,8 +145,8 @@
         <img src="images/ProtectoraPets.png" alt="Protectora de Animales">
                 </div>
                 <div class="project-content">
-        <h3>Protectora de Animales</h3>
-        <p>App integral para la gestión de una protectora de animales. Permite registrar mascotas, gestionar adopciones, controlar el historial veterinario y automatizar recordatorios de vacunas y revisiones.</p>
+        <h3 data-i18n="projects.protectora.title">Protectora de Animales</h3>
+        <p data-i18n="projects.protectora.desc">App integral para la gestión de una protectora de animales. Permite registrar mascotas, gestionar adopciones, controlar el historial veterinario y automatizar recordatorios de vacunas y revisiones.</p>
       </div>
               </div>
             </div>
@@ -148,8 +156,8 @@
         <img src="images/SuperMarket.png" alt="Gestión de Supermercado">
                 </div>
                 <div class="project-content">
-        <h3>Gestión de Supermercado</h3>
-        <p>Solución para la gestión de inventario, ventas y pedidos en supermercados. Incluye paneles de control, reportes automáticos y pedidos inteligentes a proveedores.</p>
+        <h3 data-i18n="projects.supermercado.title">Gestión de Supermercado</h3>
+        <p data-i18n="projects.supermercado.desc">Solución para la gestión de inventario, ventas y pedidos en supermercados. Incluye paneles de control, reportes automáticos y pedidos inteligentes a proveedores.</p>
       </div>
               </div>
             </div>
@@ -159,14 +167,14 @@
         <img src="images/Metro.png" alt="Incidencias Metro">
                 </div>
                 <div class="project-content">
-        <h3>Incidencias Metro</h3>
-        <p>Aplicación para registrar y gestionar incidencias en la red de metro. Los empleados pueden reportar problemas en tiempo real, asignar responsables y seguir el estado de resolución.</p>
+        <h3 data-i18n="projects.metro.title">Incidencias Metro</h3>
+        <p data-i18n="projects.metro.desc">Aplicación para registrar y gestionar incidencias en la red de metro. Los empleados pueden reportar problemas en tiempo real, asignar responsables y seguir el estado de resolución.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <button class="carousel-btn next" aria-label="Proyecto siguiente">
+        <button class="carousel-btn next" data-i18n-aria="projects.next" aria-label="Proyecto siguiente">
           <i class="fas fa-chevron-right"></i>
         </button>
         <div class="carousel-indicators">
@@ -185,7 +193,7 @@
   <!-- MODULO 3: HABILIDADES Y EXPERIENCIA -->
   <section id="habilidades-experiencia" class="module module-skills">
     <div class="module-content">
-      <h2 class="module-title">Habilidades y Experiencia</h2>
+      <h2 class="module-title" data-i18n="skills.title">Habilidades y Experiencia</h2>
       <div class="skills-section">
     <ul class="skills-list">
       <li title="Flutter"><i class="fa-solid fa-mobile-screen-button"></i><span>Flutter</span></li>
@@ -205,23 +213,23 @@
   <!-- MODULO 4: CONTACTO -->
   <section id="contacto" class="module module-contact">
     <div class="module-content">
-      <h2 class="module-title">Contacto</h2>
+      <h2 class="module-title" data-i18n="contact.title">Contacto</h2>
       <div class="contact-content">
-        <p class="contact-intro">¿Tienes un proyecto en mente? Me encantaría escucharte y trabajar contigo.</p>
+        <p class="contact-intro" data-i18n="contact.intro">¿Tienes un proyecto en mente? Me encantaría escucharte y trabajar contigo.</p>
     <form class="contact-form" action="https://formsubmit.co/franchescahernandezv@gmail.com" method="POST">
   <div class="form-group">
-    <label for="name">Nombre</label>
-    <input type="text" id="name" name="name" required placeholder="Tu nombre">
+    <label for="name" data-i18n="contact.name">Nombre</label>
+    <input type="text" id="name" name="name" required data-i18n-placeholder="contact.name.placeholder" placeholder="Tu nombre">
   </div>
   <div class="form-group">
-    <label for="email">Correo</label>
-    <input type="email" id="email" name="email" required placeholder="Tu correo">
+    <label for="email" data-i18n="contact.email">Correo</label>
+    <input type="email" id="email" name="email" required data-i18n-placeholder="contact.email.placeholder" placeholder="Tu correo">
   </div>
   <div class="form-group">
-    <label for="message">Mensaje</label>
-    <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
+    <label for="message" data-i18n="contact.message">Mensaje</label>
+    <textarea id="message" name="message" required data-i18n-placeholder="contact.message.placeholder" placeholder="Tu mensaje"></textarea>
   </div>
-  <button type="submit" class="btn-primary">Enviar</button>
+  <button type="submit" class="btn-primary" data-i18n="contact.submit"><span>Enviar</span></button>
   <input type="hidden" name="_next" value="https://cheky.dev/gracias.html">
 <input type="hidden" name="_captcha" value="false">
 </form>
@@ -241,12 +249,17 @@
 </main>
 
 <footer class="footer-module">
-    <p>&copy; 2025 Chekydev. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Chekydev. <span data-i18n="footer.copyright">Todos los derechos reservados.</span></p>
   </footer>
 
   <!-- Botón flotante de contacto -->
-  <a href="#contacto" class="contact-float-btn" aria-label="Ir a contacto" title="Contacto">
+  <a href="#contacto" class="contact-float-btn" data-i18n-aria="contact.button.aria" data-i18n-title="contact.button" aria-label="Ir a contacto" title="Contacto">
     <i class="fas fa-envelope"></i>
+  </a>
+
+  <!-- Botón flotante de Instagram -->
+  <a href="https://instagram.com/cheky.dev" target="_blank" rel="noopener noreferrer" class="instagram-float-btn" aria-label="Ir a Instagram" title="Instagram">
+    <i class="fab fa-instagram"></i>
   </a>
 
   <script src="js/script.js"></script>
