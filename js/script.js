@@ -16,7 +16,7 @@ const translations = {
         'about.description': 'Manejo de tecnologías backend y frontend, con proyectos desarrollados en Go, React.js y Flutter. Experiencia en la creación de soluciones empresariales con Power Platform (Power Apps, Automate, Pages, Dataverse), orientadas a la mejora de procesos y la eficiencia.',
         'about.description2': 'Busco integrarme en equipos dinámicos, preferentemente en modalidad remota, para seguir aprendiendo y aportar valor mediante soluciones tecnológicas innovadoras.',
         'about.description3': 'Mis fortalezas incluyen:',
-        'about.feature1.title': 'Desarrollo Web Full-Stack',
+        'about.feature1.title': 'Desarrollo web y aplicaciones móviles',
         'about.feature1.desc': 'Creación de APIs y lógica de negocio con PHP/Laravel, y desarrollo de frontend con JavaScript y tecnologías CSS modernas.',
         'about.feature2.title': 'Automatización de Procesos',
         'about.feature2.desc': 'Amplia experiencia en el ecosistema Microsoft Power Platform (Power Apps, Power Automate, Power BI, Dataverse).',
@@ -76,7 +76,7 @@ const translations = {
         'nav.contact': 'Contact',
         
         // Header
-        'header.role': 'Full-Stack Developer & Automation Specialist',
+        'header.role': 'Web and Mobile App Developer',
         
         // About Me
         'about.title': 'About Me',
@@ -84,7 +84,7 @@ const translations = {
         'about.description': 'I handle backend and frontend technologies, with projects developed in Go, React.js and Flutter. Experience in creating business solutions with Power Platform (Power Apps, Automate, Pages, Dataverse), focused on process improvement and efficiency.',
         'about.description2': 'I seek to join dynamic teams, preferably in remote mode, to continue learning and add value through innovative technological solutions.',
         'about.description3': 'My strengths include:',
-        'about.feature1.title': 'Full-Stack Web Development',
+        'about.feature1.title': 'Web and Mobile App Development',
         'about.feature1.desc': 'API creation and business logic with PHP/Laravel, and frontend development with JavaScript and modern CSS technologies.',
         'about.feature2.title': 'Process Automation',
         'about.feature2.desc': 'Extensive experience in the Microsoft Power Platform ecosystem (Power Apps, Power Automate, Power BI, Dataverse).',
