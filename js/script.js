@@ -8,12 +8,14 @@ const translations = {
         'nav.contact': 'Contacto',
         
         // Header
-        'header.role': 'Desarrolladora Full-Stack & Automatización',
+        'header.role': 'Desarrolladora web y aplicaciones móviles',
         
         // Sobre Mí
         'about.title': 'Sobre Mí',
-        'about.intro': 'Soy <strong>Franchesca Hernández</strong>, Desarrolladora Full-Stack y Especialista en Automatización.',
-        'about.description': 'Busco aportar valor en equipos que apuestan por la innovación y la mejora continua. Mis fortalezas incluyen:',
+        'about.intro': 'Soy <strong>Franchesca Hernández</strong>, Programadora junior motivada, con experiencia práctica en el desarrollo de aplicaciones web, móviles y low-code.',
+        'about.description': 'Manejo de tecnologías backend y frontend, con proyectos desarrollados en Go, React.js y Flutter. Experiencia en la creación de soluciones empresariales con Power Platform (Power Apps, Automate, Pages, Dataverse), orientadas a la mejora de procesos y la eficiencia.',
+        'about.description2': 'Busco integrarme en equipos dinámicos, preferentemente en modalidad remota, para seguir aprendiendo y aportar valor mediante soluciones tecnológicas innovadoras.',
+        'about.description3': 'Mis fortalezas incluyen:',
         'about.feature1.title': 'Desarrollo Web Full-Stack',
         'about.feature1.desc': 'Creación de APIs y lógica de negocio con PHP/Laravel, y desarrollo de frontend con JavaScript y tecnologías CSS modernas.',
         'about.feature2.title': 'Automatización de Procesos',
@@ -78,8 +80,10 @@ const translations = {
         
         // About Me
         'about.title': 'About Me',
-        'about.intro': 'I am <strong>Franchesca Hernández</strong>, Full-Stack Developer and Automation Specialist.',
-        'about.description': 'I seek to add value to teams that bet on innovation and continuous improvement. My strengths include:',
+        'about.intro': 'I am <strong>Franchesca Hernández</strong>, Motivated junior programmer with practical experience in web, mobile and low-code application development.',
+        'about.description': 'I handle backend and frontend technologies, with projects developed in Go, React.js and Flutter. Experience in creating business solutions with Power Platform (Power Apps, Automate, Pages, Dataverse), focused on process improvement and efficiency.',
+        'about.description2': 'I seek to join dynamic teams, preferably in remote mode, to continue learning and add value through innovative technological solutions.',
+        'about.description3': 'My strengths include:',
         'about.feature1.title': 'Full-Stack Web Development',
         'about.feature1.desc': 'API creation and business logic with PHP/Laravel, and frontend development with JavaScript and modern CSS technologies.',
         'about.feature2.title': 'Process Automation',
@@ -405,68 +409,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Efecto de capas para el logo - movimiento con el cursor
-    const base = document.querySelector(".logo-wrapper .base");
-    const hair = document.querySelector(".logo-wrapper .hair");
-    const eyes = document.querySelector(".logo-wrapper .eyes");
-    const glowOutline = document.querySelector(".logo-wrapper .glow-outline");
-    const logoWrapper = document.querySelector(".logo-wrapper");
-
-    if (logoWrapper && base) {
-        document.addEventListener("mousemove", (e) => {
-            const rect = logoWrapper.getBoundingClientRect();
-            const x = e.clientX - (rect.left + rect.width / 2);
-            const y = e.clientY - (rect.top + rect.height / 2);
-
-            const move = (element, intensity) => {
-                if (element) {
-                    element.style.transform = `translate(${x * intensity}px, ${y * intensity}px)`;
-                }
-            };
-
-            // Base (movimiento suave)
-            move(base, 0.01);
-
-            // Pelo (más lento, efecto viento)
-            if (hair) {
-                hair.style.transform = `translate(${x * 0.03}px, ${y * 0.03}px) rotate(${x * 0.005}deg)`;
-            }
-
-            // Ojos (siguen al cursor)
-            if (eyes) {
-                let eyeX = x * 0.06;
-                let eyeY = y * 0.06;
-
-                // Limitar movimiento de los ojos
-                const limit = 12;
-                eyeX = Math.max(-limit, Math.min(limit, eyeX));
-                eyeY = Math.max(-limit, Math.min(limit, eyeY));
-
-                eyes.style.transform = `translate(${eyeX}px, ${eyeY}px)`;
-            }
-
-            // Glow contorno (más movimiento)
-            move(glowOutline, 0.12);
-        });
-
-        // Reset cuando el mouse sale del área
-        logoWrapper.addEventListener("mouseleave", () => {
-            const reset = (element) => {
-                if (element) {
-                    element.style.transform = "translate(0px, 0px)";
-                }
-            };
-
-            reset(base);
-            if (hair) {
-                hair.style.transform = "translate(0px, 0px) rotate(0deg)";
-            }
-            if (eyes) {
-                eyes.style.transform = "translate(0px, 0px)";
-            }
-            reset(glowOutline);
-        });
-    }
 
     // Botón de cambio de idioma
     const langToggle = document.getElementById('langToggle');
